@@ -12,6 +12,14 @@ namespace WcfService3
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        Alumnos CrearAlumnos();
+
+        [OperationContract]
+        double convertirDolares(double pesos);
+
+        [OperationContract]
+        Alumnos GetDatosAlumnos(Alumnos alumnos);
 
         [OperationContract]
         string GetData(int value);
@@ -21,6 +29,41 @@ namespace WcfService3
 
         // TODO: agregue aquí sus operaciones de servicio
     }
+
+    [DataContract]
+    public class Alumnos
+    {
+        string nombre;
+        int nocontrol;
+        int semestre;
+        float promedio;
+
+        [DataMember]
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+        [DataMember]
+        public int NoControl
+        {
+            get { return nocontrol; }
+            set { nocontrol = value; }
+        }
+        [DataMember]
+        public int Semestre
+        {
+            get { return semestre; }
+            set { semestre = value; }
+        }
+        [DataMember]
+        public float Promedio
+        {
+            get { return promedio; }
+            set { promedio = value; }
+        }
+    }
+    
 
 
     // Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.

@@ -16,7 +16,10 @@ namespace WcfService3
         {
             return string.Format("You entered: {0}", value);
         }
-
+        public double convertirDolares(double pesos)
+        {
+            return pesos * 20.52;
+        }
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)
@@ -29,5 +32,21 @@ namespace WcfService3
             }
             return composite;
         }
+
+        public Alumnos GetDatosAlumnos(Alumnos alumnos)
+        {
+            return alumnos;
+        }
+        public Alumnos CrearAlumnos()
+        {
+            Alumnos alumno = new Alumnos();
+            alumno.Nombre = "Lizeth Mendieta";
+            alumno.NoControl = 17030094;
+            alumno.Semestre = 6;
+            alumno.Promedio = 79;
+            return alumno;
+
+        }
     }
+   
 }
