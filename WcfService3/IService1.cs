@@ -12,6 +12,14 @@ namespace WcfService3
     [ServiceContract]
     public interface IService1
     {
+
+        [OperationContract]
+        string GetIdProducto(int value);
+
+        [OperationContract]
+        Producto GetProducto(Producto producto);
+
+
         [OperationContract]
         Alumnos CrearAlumnos();
 
@@ -86,5 +94,25 @@ namespace WcfService3
             get { return stringValue; }
             set { stringValue = value; }
         }
+    }
+    [DataContract]
+    public class Producto
+    {
+        string nombre;
+        int id;
+
+        [DataMember]
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+        [DataMember]
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
     }
 }

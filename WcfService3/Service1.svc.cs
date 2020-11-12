@@ -20,6 +20,29 @@ namespace WcfService3
         {
             return pesos * 20.52;
         }
+        //metodo 2
+        Producto producto = new Producto();
+        public string GetIdProducto(int value)
+        {
+            if(value == 12)
+            {
+                producto.Nombre = "Coca-Cola";
+                return string.Format("su producto es" + producto.Nombre);
+            }
+            else if (value == 678)
+            {
+                producto.Nombre = "Jugo";
+                return string.Format("su producto es" + producto.Nombre);
+            }
+
+            else if (value == 34)
+            {
+                producto.Nombre = "Manzanita";
+                return string.Format("su producto es" + producto.Nombre);
+
+            }
+            return null;
+        }
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)
@@ -32,18 +55,34 @@ namespace WcfService3
             }
             return composite;
         }
+        public Producto GetProducto(Producto producto)
+        {
+            if(producto.BoolValue)
+            {
+                producto.Nombre += "";
+                producto.Id += 0;
+            }
+            return producto;
+        }
 
         public Alumnos GetDatosAlumnos(Alumnos alumnos)
         {
             return alumnos;
         }
+
         public Alumnos CrearAlumnos()
         {
+            
             Alumnos alumno = new Alumnos();
             alumno.Nombre = "Lizeth Mendieta";
             alumno.NoControl = 17030094;
             alumno.Semestre = 6;
             alumno.Promedio = 79;
+        
+            alumno.Nombre = "Luis";
+            alumno.NoControl = 30094;
+            alumno.Semestre = 7;
+            alumno.Promedio = 70;
             return alumno;
 
         }
