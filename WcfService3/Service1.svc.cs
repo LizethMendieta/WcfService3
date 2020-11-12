@@ -57,11 +57,6 @@ namespace WcfService3
         }
         public Producto GetProducto(Producto producto)
         {
-            if(producto.BoolValue)
-            {
-                producto.Nombre += "";
-                producto.Id += 0;
-            }
             return producto;
         }
 
