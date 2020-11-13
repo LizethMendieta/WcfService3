@@ -21,6 +21,34 @@ namespace WcfService3
         {
             return pesos * 20.52;
         }
+        //metodo 3
+        Libro libro = new Libro();
+        public string GetIdBiblioteca(int value)
+        {
+            if (value == 1)
+            {
+                libro.Titulo = "Matematicas";
+                return string.Format("El libro es:" + libro.Titulo);
+            }
+            else if (value == 2)
+            {
+                libro.Titulo = "Español";
+                return string.Format("El libro es:" + libro.Titulo);
+            }
+            else if (value == 3)
+            {
+                libro.Titulo = "Ciencias";
+                return string.Format("El libro es:" + libro.Titulo);
+            }
+            else if (value == 4)
+            {
+                libro.Titulo = "Historia";
+                return string.Format("El libro es:" + libro.Titulo);
+            }
+
+            return null;
+
+        }
         //metodo 2
         Producto producto = new Producto();
         public string GetIdProducto(int value)
@@ -44,34 +72,7 @@ namespace WcfService3
             }
             return null;
         }
-        //metodo 3
-        Libro libro = new Libro();
-        public string GetIdBiblioteca(int value)
-        {
-            if( value ==1)
-            {
-                libro.Titulo = "Matematicas";
-                return string.Format("El libro es:" + libro.Titulo);
-            }
-            else if (value == 2)
-            {
-                libro.Titulo = "Español";
-                return string.Format("El libro es:" + libro.Titulo);
-            }
-           else if (value == 3)
-            {
-                libro.Titulo = "Ciencias";
-                return string.Format("El libro es:" + libro.Titulo);
-            }
-            else if (value == 4)
-            {
-                libro.Titulo = "Historia";
-                return string.Format("El libro es:" + libro.Titulo);
-            }
-
-            return null;
-           
-        }
+        
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)

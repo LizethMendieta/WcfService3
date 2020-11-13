@@ -12,6 +12,11 @@ namespace WcfService3
     [ServiceContract]
     public interface IService1
     {
+        [OperationContract]
+        string GetIdBiblioteca(int value);
+
+        [OperationContract]
+        Libro GetLibro(Libro libro);
 
         [OperationContract]
         string GetIdProducto(int value);
@@ -114,5 +119,39 @@ namespace WcfService3
             set { id = value; }
         }
 
+    }
+    [DataContract]
+    public class Libro
+    {
+        string titulo;
+        int año;
+        string autor;
+        int id;
+
+        [DataMember]
+        public string Titulo
+        {
+            get { return titulo; }
+            set { titulo = value; }
+        }
+        [DataMember]
+        public int Año
+        {
+            get { return año; }
+            set { año = value; }
+
+        }
+        [DataMember]
+        public string Autor
+        {
+            get { return autor; }
+            set { autor = value; }
+        }
+        [DataMember]
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
     }
 }
