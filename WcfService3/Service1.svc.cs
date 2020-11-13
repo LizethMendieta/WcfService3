@@ -16,6 +16,7 @@ namespace WcfService3
         {
             return string.Format("You entered: {0}", value);
         }
+        //ejemplo1.1
         public double convertirDolares(double pesos)
         {
             return pesos * 20.52;
@@ -43,6 +44,34 @@ namespace WcfService3
             }
             return null;
         }
+        //metodo 3
+        Libro libro = new Libro();
+        public string GetIdBiblioteca(int value)
+        {
+            if( value ==1)
+            {
+                libro.Titulo = "Matematicas";
+                return string.Format("El libro es:" + libro.Titulo);
+            }
+            else if (value == 2)
+            {
+                libro.Titulo = "Español";
+                return string.Format("El libro es:" + libro.Titulo);
+            }
+           else if (value == 3)
+            {
+                libro.Titulo = "Ciencias";
+                return string.Format("El libro es:" + libro.Titulo);
+            }
+            else if (value == 4)
+            {
+                libro.Titulo = "Historia";
+                return string.Format("El libro es:" + libro.Titulo);
+            }
+
+            return null;
+           
+        }
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
             if (composite == null)
@@ -54,6 +83,10 @@ namespace WcfService3
                 composite.StringValue += "Suffix";
             }
             return composite;
+        }
+        public Libro GetLibro(Libro libro)
+        {
+            return libro;
         }
         public Producto GetProducto(Producto producto)
         {
@@ -73,11 +106,7 @@ namespace WcfService3
             alumno.NoControl = 17030094;
             alumno.Semestre = 6;
             alumno.Promedio = 79;
-        
-            alumno.Nombre = "Luis";
-            alumno.NoControl = 30094;
-            alumno.Semestre = 7;
-            alumno.Promedio = 70;
+       
             return alumno;
 
         }
