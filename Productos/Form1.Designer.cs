@@ -35,7 +35,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(236, 231);
+            this.button1.Location = new System.Drawing.Point(293, 184);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(236, 155);
+            this.textBox1.Location = new System.Drawing.Point(293, 149);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
@@ -53,9 +53,9 @@
             // listView1
             // 
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(503, 155);
+            this.listView1.Location = new System.Drawing.Point(439, 122);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(121, 97);
+            this.listView1.Size = new System.Drawing.Size(254, 170);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
