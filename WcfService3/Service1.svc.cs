@@ -102,7 +102,7 @@ namespace WcfService3
         public Alumnos CrearAlumnos()
         {
             
-            Alumnos alumno = new Alumnos();
+           Alumnos alumno = new Alumnos();
             alumno.Nombre = "Lizeth Mendieta";
             alumno.NoControl = 17030094;
             alumno.Semestre = 6;
@@ -112,5 +112,4 @@ namespace WcfService3
 
         }
     }
-   
 }
