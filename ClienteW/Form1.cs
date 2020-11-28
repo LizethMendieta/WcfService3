@@ -15,6 +15,13 @@ namespace ClienteW
         {
             InitializeComponent();
         }
+        public void borrar()
+        {
+            textBox2.Text = "";
+            textBox3.Text = "";
+            textBox4.Text = "";
+            textBox5.Text = "";
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -22,9 +29,9 @@ namespace ClienteW
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { 
-  
-            ServiceReference2.Service1Client alumno = new ServiceReference2.Service1Client ();
+        {
+
+            ServiceReference2.Service1Client alumno = new ServiceReference2.Service1Client();
             var Listado = alumno.CrearAlumnos();
             var lis = alumno.GetDatosAlumnos(Listado);
             textBox2.Text = lis.Nombre;
@@ -37,6 +44,12 @@ namespace ClienteW
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            borrar();
 
         }
     }

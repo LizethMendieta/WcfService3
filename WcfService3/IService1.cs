@@ -12,19 +12,8 @@ namespace WcfService3
     [ServiceContract]
     public interface IService1
     {
-        [OperationContract]
-        string GetIdBiblioteca(int value);
 
-        [OperationContract]
-        Libro GetLibro(Libro libro);
-
-        [OperationContract]
-        string GetIdProducto(int value);
-
-        [OperationContract]
-        Producto GetProducto(Producto producto);
-
-
+        //metodo uno
         [OperationContract]
         Alumnos CrearAlumnos();
 
@@ -35,7 +24,16 @@ namespace WcfService3
         Alumnos GetDatosAlumnos(Alumnos alumnos);
 
         [OperationContract]
-        string GetData(int value);
+        string GetData(string value);
+        
+        //metodo dos
+        [OperationContract]
+        Libros GetDatosLibros(Libros libros);
+
+        [OperationContract]
+        Libros CrearLibrosos();
+
+
 
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
@@ -76,52 +74,8 @@ namespace WcfService3
             set { promedio = value; }
         }
     }
-    
-
-
-    // Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.
-    [DataContract]
-    public class CompositeType
-    {
-        bool boolValue = true;
-        string stringValue = "Hello ";
-
-        [DataMember]
-        public bool BoolValue
-        {
-            get { return boolValue; }
-            set { boolValue = value; }
-        }
-
-        [DataMember]
-        public string StringValue
-        {
-            get { return stringValue; }
-            set { stringValue = value; }
-        }
-    }
-    [DataContract]
-    public class Producto
-    {
-        string nombre;
-        int id;
-
-        [DataMember]
-        public string Nombre
-        {
-            get { return nombre; }
-            set { nombre = value; }
-        }
-        [DataMember]
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
-
-    }
-    [DataContract]
-    public class Libro
+    //metodo 2
+    public class Libros
     {
         string titulo;
         int año;
@@ -152,6 +106,30 @@ namespace WcfService3
         {
             get { return id; }
             set { id = value; }
+        }
+    }
+    
+
+
+    // Utilice un contrato de datos, como se ilustra en el ejemplo siguiente, para agregar tipos compuestos a las operaciones de servicio.
+    [DataContract]
+    public class CompositeType
+    {
+        bool boolValue = true;
+        string stringValue = "Hello ";
+
+        [DataMember]
+        public bool BoolValue
+        {
+            get { return boolValue; }
+            set { boolValue = value; }
+        }
+
+        [DataMember]
+        public string StringValue
+        {
+            get { return stringValue; }
+            set { stringValue = value; }
         }
     }
 }
