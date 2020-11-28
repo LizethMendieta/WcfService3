@@ -14,7 +14,7 @@ namespace WcfService3
     {
         public string GetData(string value)
         {
-            return string.Format("You entered: {0}", value);
+            return string.Format("se agrego a la lista: {0}", value);
         }
         //ejemplo1.1
         public double convertirDolares(double pesos)
@@ -67,6 +67,23 @@ namespace WcfService3
             libros.Año = 2009;
             libros.Id = 100;
             return libros;
+        }
+
+        public Producto GetProducto(Producto producto)
+        {
+
+            return producto;
+
+        }
+
+        public Producto GetIdProducto()
+        {
+            Producto producto = new Producto();
+            producto.Nombre = "jabon de baño";
+            producto.Id = 19;
+            producto.Precio = 10;
+            return producto;
+
         }
     }
 }
